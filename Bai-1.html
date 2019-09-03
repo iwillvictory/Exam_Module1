@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+    <script>
+        ////////Run Program ///////////
+        let arr1=[10,5,2,8,-1,6,8];
+        let arr2=[2,4,0,5,1];
+        let arr3=[-8,-6,-2,-6,-1,-1,-4];
+        alert(findMaxScore(arr1));
+        alert(findMaxScore(arr2));
+        alert(findMaxScore(arr3));
+
+
+        /////////FUNCTIONS/////////////////
+        function findMaxScore(arrayOfInteger){
+            let maxScore=-Infinity;
+            for(let element of arrayOfInteger){
+                if(maxScore < element){
+                    maxScore=element;
+                }
+            }
+            return maxScore;
+        }
+
+
+    </script>
+
+</body>
+</html>

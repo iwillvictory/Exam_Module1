@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+    <script>
+
+
+        alert(printFibonacci(12));
+        alert(printFibonacci(25));
+
+
+        //////////FUNCTIONS ///////////////
+        function printFibonacci(integerNumber){
+            let fibonacciText="";
+            let firstNumber=1, secondNumber=1, thirdNumber;
+            if(integerNumber==2){
+                fibonacciText="1";
+            }else if(integerNumber > 2){
+                fibonacciText +="1, 1";
+                while((firstNumber+secondNumber) < integerNumber){
+                    thirdNumber=firstNumber+secondNumber;
+                    firstNumber=secondNumber;
+                    secondNumber=thirdNumber;
+                    fibonacciText +=", " + thirdNumber;
+                }
+                return fibonacciText;
+            }
+            return fibonacciText;
+        }
+
+    </script>
+
+</body>
+</html>

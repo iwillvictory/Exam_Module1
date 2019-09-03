@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 4</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="800px" height="800px" style="border:blue solid 1px"> This browser not support</canvas>
+    <script>
+
+        let myCanvas= document.getElementById("myCanvas");
+        let rectangle= new Rectangle(10,10,200,100,"#000000");
+        rectangle.render(myCanvas);
+
+        ////////Definition Rectangle Class
+        function Rectangle(posX,posY,width,height,color){
+            this.posX = posX;
+            this.posY = posY;
+            this.width = width;
+            this.height = height;
+            this.color = color;
+            this.getPosX=function () {
+                return this.posX;
+            };
+            this.getPosY=function () {
+                return this.posY;
+            };
+            this.getWidth=function () {
+                return this.width;
+            };
+            this.getHeight=function () {
+                return this.height;
+            };
+            this.getColor=function () {
+                return this.color;
+            };
+
+            this.setPosX = function (posX) {
+                this.posX=posX;
+            };
+            this.setPosY = function (posY) {
+                this.posY=posY;
+            };
+            this.setWidth = function (width) {
+                this.width=width;
+            };
+            this.setHeight = function (height) {
+                this.Height=height;
+            };
+            this.setColor = function (color) {
+                this.color=color;
+            };
+
+            this.render = function (canvas) {
+                let context = canvas.getContext("2d");
+                context.beginPath();
+                context.fillStyle=this.color;
+                context.fillRect(this.posX,this.posY,this.width,this.height);
+                context.closePath();
+            }
+        }
+    </script>
+
+</body>
+</html>

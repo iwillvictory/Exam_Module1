@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+    <script>
+
+        /////////// Program /////////////
+
+        let arr4=[12,6,3,7,21,5,7];
+        let arr5=[12,6,3,7,21,5,7];
+        let arr6=[12,6,3,7,21,5,7];
+        let arr7=[12,6,3,4,21,5,7];
+
+        alert(tryRemoveFromArray(arr4,2));
+        alert(tryRemoveFromArray(arr5,12));
+        alert(tryRemoveFromArray(arr6,7));
+        alert(tryRemoveFromArray(arr7,7));
+
+        ////////////Functions///////////
+
+
+        function tryRemoveFromArray(arrayOfInteger,integerNumber) {
+            while(true){
+                let index=arrayOfInteger.indexOf(integerNumber);
+                let isAppear=index!==-1;
+                if(isAppear){
+                    arrayOfInteger.splice(index,1);
+                }else{
+                    break;
+                }
+            }
+            return arrayOfInteger;
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>
